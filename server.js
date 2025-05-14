@@ -11,9 +11,10 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // Connect to MongoDB
-// Connect to MongoDB
-mongoose.connect('mongodb+srv://pathakpranav93:happy123@cluster-saarthi.813ngbj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Saarthi')
-  .then(() => console.log('Connected to MongoDB'))
+mongoose.connect('mongodb+srv://pathakpranav93:pranav123@cluster-saarthi.813ngbj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Saarthi', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error(err));
 
 
