@@ -2,13 +2,16 @@
   "routes": [
     {
       "route": "/about",
+      "methods": [
+        "get"
+      ],
       "rewrite": "/about.html"
     },
-     {
+    {
       "route": "/index",
       "rewrite": "/index.html"
     },
-     {
+    {
       "route": "/courses",
       "rewrite": "/courses.html"
     },
