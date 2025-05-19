@@ -16,6 +16,9 @@
     },
     {
       "route": "/courses",
+      "methods": [
+        "get"
+      ],
       "rewrite": "/courses.html"
     },
     {
