@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "route": "/about",
+      "rewrite": "/about.html"
+    },
+     {
+      "route": "/index",
+      "rewrite": "/index.html"
+    },
+     {
+      "route": "/courses",
+      "rewrite": "/courses.html"
+    },
+    {
+      "route": "/contact",
+      "rewrite": "/contact.html"
+    }
+  ]
+}
