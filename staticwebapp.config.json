@@ -9,6 +9,9 @@
     },
     {
       "route": "/index",
+      "methods": [
+        "get"
+      ],
       "rewrite": "/index.html"
     },
     {
