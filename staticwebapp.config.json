@@ -23,6 +23,9 @@
     },
     {
       "route": "/contact",
+      "methods": [
+        "get"
+      ],
       "rewrite": "/contact.html"
     }
   ]
