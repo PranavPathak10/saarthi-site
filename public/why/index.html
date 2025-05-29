@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Saarthi | Saarthi Knowledge Center</title>
+  <style>
+    :root {
+      --primary: #143f6b;
+      --accent: #f55353;
+      --light: #f5f7fa;
+      --dark: #0a1f33;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      background: white;
+    }
+
+    .reason-card {
+      background: var(--light);
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .reason-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .reason-card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .reason-card p {
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--primary);
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Why Choose Saarthi?</h1>
+    <p>Empowering youth with knowledge, mentorship, and opportunity — because we believe in the power of guided transformation.</p>
+  </header>
+
+  <section class="reasons">
+    <div class="reason-card fade-in">
+      <h3>Holistic Learning</h3>
+      <p>We go beyond academics to build life skills, critical thinking, and self-awareness, preparing youth for real-world challenges.</p>
+    </div>
+    <div class="reason-card fade-in">
+      <h3>Community-Driven</h3>
+      <p>Rooted in local insights, our programs are designed with and for the communities we serve, ensuring relevance and trust.</p>
+    </div>
+    <div class="reason-card fade-in">
+      <h3>Mentorship That Matters</h3>
+      <p>We connect learners with mentors who inspire, guide, and uplift — creating a ripple effect of positive change.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Saarthi Knowledge Center. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll animation
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+</body>
+</html>
